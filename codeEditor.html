@@ -1,0 +1,260 @@
+﻿<!--
+* This file is part of Wakanda software, licensed by Wakanda under
+*  (i) the GNU General Public License version 3 (GNU GPL v3), or
+*  (ii) the Affero General Public License version 3 (AGPL v3) or
+*  (iii) a commercial license.
+* This file remains the exclusive property of Wakanda and/or its licensors
+* and is protected by national and international legislations.
+* In any event, Licensee's compliance with the terms and conditions
+* of the applicable license constitutes a prerequisite to any use of this file.
+* Except as otherwise expressly stated in the applicable license,
+* such license does not include any other license or rights on this file,
+* Wakanda's and/or its licensors' trademarks and/or other proprietary rights.
+* Consequently, no title, copyright or other proprietary rights
+* other than those specified in the applicable license is granted.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Code Editor</title>
+        <link rel="stylesheet" href="/Web Components/common/styles/preferences.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <main class="wakanda-preferences">
+            <div class="tab-header">
+                <a href="#code-editor-pref" class="active">Common Preferences</a>
+                <a href="#javascript-pref">Javascript Preferences</a>
+            </div>
+            <div class="tab-line"><span id="tab-line"></span></div>
+            <div id="code-editor-pref" class="tab active">
+                <h2>Appearance</h2>
+                <ul>
+                    <li>
+                        <label for="fontName" class="padding-left">Font</label>
+                        <select name="fontName" class="large"></select>
+                    </li>
+                    <li>
+                        <label for="fontSize" class="padding-left">Size</label>
+                        <input type="number" class="large" name="fontSize" min="4" max="64">
+                    </li>
+                    <li>
+                        <label for="colorScheme" class="pull-left padding-left">Theme</label>
+                        <select name="colorScheme" class="pull-left select-with-nav">
+                        </select>
+                        <a href="#" class="pull-left select-nav prev"><img src="/Web Components/common/images/selectarrow-left.png" alt="&lt;"/></a>
+                        <a href="#" class="pull-left select-nav next"><img src="/Web Components/common/images/selectarrow-right.png" alt="&gt;"/></a>
+                    </li>
+                    <li>
+                        <label for="colorScheme" class="pull-left padding-left">Preview</label>
+                        <div id="colorScheme" class="pull-left">
+                            <div id="codeSample">
+                                <pre><code class="javascript" style="display:block"><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" ><span class="ace_keyword">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_language ace_boolean">true</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" >    <span class="ace_storage ace_type">var</span> <span class="ace_identifier">a</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">15</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">b</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_string">'wakanda'</span><span class="ace_punctuation ace_operator">,</span> </div><div class="ace_line" >        <span class="ace_identifier">c</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_language ace_boolean">true</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">d</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">b</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">replace</span><span class="ace_paren ace_lparen">(</span><span class="ace_string ace_regexp">/w/</span><span class="ace_punctuation ace_operator">,</span><span class="ace_string">'W'</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span> </div><div class="ace_line" >        <span class="ace_identifier">e</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable ace_language">this</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" >        </div><div class="ace_line" >    <span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">foo</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_parameter">items</span><span class="ace_punctuation ace_operator">, </span><span class="ace_variable ace_parameter">nada</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" >        <span class="ace_keyword">for</span> <span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">var</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">=</span><span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">&lt;</span><span class="ace_identifier">items</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_constant">length</span><span class="ace_punctuation ace_operator">;</span> <span class="ace_identifier">i</span><span class="ace_keyword ace_operator">++</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" >            <span class="ace_support ace_function">alert</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">items</span><span class="ace_paren ace_lparen">[</span><span class="ace_identifier">i</span><span class="ace_paren ace_rparen">]</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_string">"juhu</span><span class="ace_constant ace_language ace_escape">\n</span><span class="ace_string">"</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" >        <span class="ace_paren ace_rparen">}</span>   <span class="ace_comment">// Real Tab.</span></div><div class="ace_line" >    <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" ><span class="ace_paren ace_rparen">}</span></div></div></code></pre>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <h2>Tabs</h2>
+                <ul>
+                    <li>
+                        <label for="tabSize" class="margin-left">Tab size (number of spaces)</label>
+                        <input type="number" name="tabSize" min="2" max="32">
+                    </li>
+                    <li>
+                        <input type="checkbox" name="insertSpacesForTabs">
+                        <label for="insertSpacesForTabs">Translate tabs to spaces</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="showTabulationLine">
+                        <label for="showTabulationLine">Display vertical tab lines</label>
+                    </li>
+                </ul>
+                <h2>Line numbers</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="showLineNumbers">
+                        <label for="showLineNumbers">Show line numbers</label>
+                    </li>
+                </ul>
+                <h2>Blocks</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="autohideCollapseButton">
+                        <label for="autohideCollapseButton">Hide block expand/collapse buttons</label>
+                    </li>
+                </ul>
+            </div>
+            <div id="javascript-pref" class="tab">
+                <h2>Automatic insertion in code</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="autoInsertTabs">
+                        <label for="autoInsertTabs">Tabs</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="autoInsertBlock">
+                        <label for="autoInsertBlock">Closing comment blocks</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="autoInsertClosingChar">
+                        <label for="autoInsertClosingChar">Closing characters</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="autoQuote">
+                        <label for="autoQuote">Enclosing selected text in quotes</label>
+                    </li>
+                </ul>
+                <h2>Autocomplete suggestions</h2>
+                <ul>
+                    <li>
+                        <label for="suggestion" class="short">Display autocomplete suggestions</label>
+                        <select name="suggestion">
+                            <option value="whileTyping">while typing</option>
+                            <option value="onDot">on dot</option>
+                            <option value="onDemand">on demand</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="suggestionShortcut" class="short">Display/insert autocomplete suggestions on</label>
+                        <select name="suggestionShortcut">
+                            <option value="ctrlSpace">control-space</option>
+                            <option value="tab">tab</option>
+                        </select>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="suggestionColor">
+                        </div>
+                        <label for="suggestionColor">Suggestion text color</label>
+                    </li>       
+                </ul>
+                <h2>Blocks</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="showBlocksLines">
+                        <label for="showBlocksLines">Show block delimiter lines</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="showBlocksHilite">
+                        <label for="showBlocksHilite">Highlight expanded block</label>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="hiliteBlockBackColor">
+                        </div>
+                        <label for="hiliteBlockBackColor">Block background color</label>
+                    </li>
+                </ul>
+                <h2>Brace matching highlight</h2>
+                <ul>
+                    <li>
+                        <label class="short" for="showMatchingParenthesis">Highlight matching brace method</label>
+                        <select name="showMatchingParenthesis">
+                            <option value="none">none</option>
+                            <option value="box">enclose in box</option>
+                            <option value="bold">bold</option>
+                            <option value="backColor">background color</option>
+                        </select>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="matchingParenthesisBoldColor">
+                        </div>
+                        <label for="matchingParenthesisBoldColor">Bold brace color</label>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="matchingParenthesisBackColor">
+                        </div>
+                        <label for="matchingParenthesisBackColor">Brace background color</label>
+                    </li>
+                </ul>
+                <h2>Current line highlight</h2>
+                <ul>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="cursorLineColor">
+                        </div>
+                        <label for="cursorLineColor">Current line background color</label>
+                    </li>
+                </ul>
+                <h2>File background color</h2>
+                <ul>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="clientSideBackgroundColor">
+                        </div>
+                        <label for="clientSideBackgroundColor">Client-side JS files</label>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="serverSideBackgroundColor">
+                        </div>
+                        <label for="serverSideBackgroundColor">Server-side JS files</label>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="modelScriptBackgroundColor">
+                        </div>
+                        <label for="modelScriptBackgroundColor">Model scripts</label>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="pageScriptBackgroundColor">
+                        </div>
+                        <label for="pageScriptBackgroundColor">Page scripts</label>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="defaultBackgroundColor">
+                        </div>
+                        <label for="defaultBackgroundColor">All other files</label>
+                    </li>
+                </ul>
+                <h2>Matching text highlight</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="showSearchString">
+                        <label for="showSearchString">Highlight matching occurrences</label>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="hiliteBackColor">
+                        </div>
+                        <label for="hiliteBackColor">Matching text highlight background color</label>
+                    </li>
+                </ul>
+                <h2>Reference highlight</h2>
+                <ul>
+                    <li>
+                        <label class="short" for="referenceHighlight">Highlight references</label>
+                        <select name="referenceHighlight">
+                            <option value="noHilite">never</option>
+                            <option value="hiliteOnCursor">on cursor</option>
+                            <option value="hiliteOnFullySelected">on selected reference</option>
+                        </select>
+                    </li>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="sameWordBackColor">
+                        </div>
+                        <label for="sameWordBackColor">Reference background color</label>
+                    </li>
+                </ul>
+                <h2>Tabs</h2>
+                <ul>
+                    <li>
+                        <div class="colorpicker">
+                            <input type="hidden" name="tabulationLineColor">
+                        </div>
+                        <label for="tabulationLineColor">Vertical tab line color</label>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <script src="/Web Components/common/scripts/jquery-latest.min.js"></script>
+        <script src="/Web Components/common/scripts/preferences.pack.js"></script>
+        <script src="js/codeEditor.js"></script>
+    </body>
+</html>

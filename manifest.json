@@ -1,0 +1,23 @@
+{
+    "extension": 
+    {
+        "name": "Preferences",
+        "version": "1.0.0",
+        "description": "An internal extension of Studio for Preferences Panel",
+        "icon": "preferences.png",
+        "actions": [
+                    {
+                        "name": "preferences",
+                        "title": "Preferences"
+                    },
+					{
+						"name": "initPreferences",
+						"title": "Init Preferences",
+						"trigger": [
+							{ "event": "onStudioStart" }
+						]
+					}
+        ],
+        "lifetime": "application_lifetime"
+    }
+}

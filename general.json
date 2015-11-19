@@ -1,0 +1,40 @@
+{
+    "title" : "code editor preferences",
+    "preferences" : [
+        {
+            "name" : "openFileInNewWindow",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "autoSave",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "showTips",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "foldersFirst",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "hideExtensions",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "liveBackup",
+            "type" : "radio",
+            "studio" : true
+        },
+        {
+            "name": "environmentVariablePath",
+            "type": "textarea",
+            "studio": false
+        }
+    ]
+}

@@ -1,0 +1,168 @@
+{
+    "title" : "code editor preferences",
+    "preferences" : [
+        {
+            "name" : "fontName",
+            "type" : "list",
+            "studio" : true
+        },
+        {
+            "name" : "fontSize",
+            "studio" : true
+        },
+        {
+            "name" : "tabSize",
+            "category" : "js",
+            "editor" : true,
+            "studio" : true
+        },
+        {
+            "name" : "insertSpacesForTabs",
+            "type" : "boolean",
+            "editor" : true,
+            "category" : "js",
+            "studio" : true
+        },
+        {
+            "name" : "showTabulationLine",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "tabulationLineColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "autoInsertTabs",
+            "type" : "boolean",
+            "editor" : true,
+            "category" : "js",
+            "studio" : true
+        },
+        {
+            "name" : "autoInsertBlock",
+            "type" : "boolean",
+            "editor" : true,
+            "category" : "js",
+            "studio" : true
+        },
+        {
+            "name" : "autoInsertClosingChar",
+            "type" : "boolean",
+            "editor" : true,
+            "category" : "js",
+            "studio" : true
+        },
+        {
+            "name" : "autoQuote",
+            "type" : "boolean",
+            "studio" : true,
+            "tooltipPosition" : "right",
+            "tooltip" : "If you type a quote or simple quote when a text is selected, the selected text will be enclosed in quotes/simple quotes."
+        },
+        {
+            "name" : "showLineNumbers",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "clientSideBackgroundColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "serverSideBackgroundColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "modelScriptBackgroundColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "pageScriptBackgroundColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "defaultBackgroundColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "cursorLineColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "showBlocksLines",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "autohideCollapseButton",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "showBlocksHilite",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "hiliteBlockBackColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "showSearchString",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
+            "name" : "hiliteBackColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "showMatchingParenthesis",
+            "studio" : true
+        },
+        {
+            "name" : "matchingParenthesisBoldColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "matchingParenthesisBackColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "referenceHighlight",
+            "studio" : true
+        },
+        {
+            "name" : "sameWordBackColor",
+            "type" : "color",
+            "studio" : true
+        },
+        {
+            "name" : "suggestion",
+            "editor" : true,
+            "category" : "js",
+            "studio" : true
+        },
+        {
+            "name" : "suggestionShortcut",
+            "studio" : true
+        },
+        {
+            "name" : "suggestionColor",
+            "type" : "color",
+            "studio" : true
+        }
+    ]
+}

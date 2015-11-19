@@ -1,0 +1,114 @@
+/* COMMONS */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    color: #3d4246;
+}
+
+#container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* LEFT PANEL */ 
+#selector {
+    font-size: 13px;
+    background: #566370;
+    min-width: 160px;
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+    width: 50px;
+    padding-top: 18px;
+}
+
+#selector a {
+    display: block;
+    white-space: nowrap;
+    padding: 15px 32px 15px 32px;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+    line-height: 12px;
+    color: white;
+}
+
+#selector a:hover, #selector a.selected {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: white;
+    color: #566370;
+}
+
+/* RIGHT PANEL */
+#content {
+    display: table-cell;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+#content .panel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.panel > iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#resetPreferences {
+    display: inline-block;
+    color: #e27a3f;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+#resetPreferences:hover {
+    text-decoration: underline;
+}
+
+.subtitle {
+    margin-bottom: 5px; 
+    float: left;
+}
+
+h4.subtitle {
+    width: 70%; 
+}
+
+h4.subtitle + h4.subtitle {
+    width: 30%;
+}
+
+#codeSample {
+    overflow: auto;
+    padding: 10px;
+}
+
+#serverLocation {
+    display: inline-block;
+    background: #f0f1f2;
+    padding: 12px 15px;
+    line-height: 19px;
+    margin-bottom: 30px;
+    margin-right: 8px;
+}
+
+#checkInstall {
+    margin-left: 10px;
+}
