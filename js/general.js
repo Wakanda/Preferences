@@ -29,7 +29,7 @@ $(document).ready(function() {
             studio.setPreferences('codeEditor.colorScheme',null);
             studio.extension.storage.setItem('refreshPanels', true);
             studio.sendExtensionWebZoneCommand('wakanda-extension-web-editor', 'IDE.refreshPreferences');
-            window.location.reload();
+            studio.sendExtensionWebZoneCommand('Preferences', '(function(){ window.location.reload(); })');
         });
 
         if(studio.os.isWindows) {
