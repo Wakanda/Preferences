@@ -1,5 +1,5 @@
 {
-    "extension": 
+    "extension":
     {
         "name": "Preferences",
         "version": "1.0.0",
@@ -8,7 +8,13 @@
         "actions": [
                     {
                         "name": "preferences",
-                        "title": "Preferences"
+                        "title": "Preferences",
+                        "shortcut": {
+                          "shortcutKey": "yes",
+                          "alternateKey": "no",
+                          "shiftKey": "no",
+                          "key": ","
+                        }
                     },
 					{
 						"name": "initPreferences",
