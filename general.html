@@ -1,4 +1,4 @@
-﻿<!--
+﻿  ﻿<!--
 * This file is part of Wakanda software, licensed by Wakanda under
 *  (i) the GNU General Public License version 3 (GNU GPL v3), or
 *  (ii) the Affero General Public License version 3 (AGPL v3) or
@@ -35,6 +35,10 @@
                 <label for="autoSave">Automatically save files when closing tabs</label>
             </li>
             <li>
+                <input type="checkbox" name="reloadWithoutConfirmation">
+                <label for="reloadWithoutConfirmation">Automatically reload files modified outside of the source editor</label>
+            </li>
+           <li>
                 <input type="checkbox" name="showTips">
                 <label for="showTips">Show tips</label>
             </li>
@@ -75,6 +79,15 @@
                     <button id="checkInstall">Check</button>
                 </li>
 
+            </ul>
+        </div>
+        <div id="others_options">
+          <h2>Others</h2>
+          <ul>
+              <li>
+                  <input type="checkbox" name="shutdownServerAfterSolutionClose">
+                  <label for="shutdownServerAfterSolutionClose">Shutdown server after solution close</label>
+              </li>
             </ul>
         </div>
 

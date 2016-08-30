@@ -2,7 +2,7 @@
     "extension": 
     {
         "name": "Preferences",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "description": "An internal extension of Studio for Preferences Panel",
         "icon": "preferences.png",
         "actions": [
@@ -10,13 +10,27 @@
                         "name": "preferences",
                         "title": "Preferences"
                     },
-					{
-						"name": "initPreferences",
-						"title": "Init Preferences",
-						"trigger": [
-							{ "event": "onStudioStart" }
-						]
-					}
+                    {
+                      "name": "initPreferences",
+                      "title": "Init Preferences",
+                      "trigger": [
+                        { "event": "onStudioStart" }
+                      ]
+                    },
+                    {
+                      "name": "handleSolutionBeforeClosing",
+                      "title": "Handle solution close",
+                      "trigger": [
+                        { "event": "onSolutionBeforeClosing" }
+                      ]
+                    },
+                    {
+                      "name": "handleRestoreDefaultPreferences",
+                      "title": "Handle restore default preferences",
+                      "trigger": [
+                        { "event": "onRestoreDefaultPreferences" }
+                      ]
+                    }
         ],
         "lifetime": "application_lifetime"
     }

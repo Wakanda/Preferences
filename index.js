@@ -26,7 +26,7 @@ function Preferences() {
 	var rememberInNextSession = true;
 	var openOnLeft = false;
 	var isBlackTheme = false;
-  
+
 	studio.extension.openPageInTab('preferences.html', 'Preferences', rememberInNextSession, openOnLeft, isBlackTheme, "studio::Preferences");
 	return true;
 };
@@ -37,6 +37,20 @@ function InitPreferences() {
     studio.extension.registerPreferencePanel('CODE EDITOR', 'codeEditor.html', 200);
 }
 
+function HandleSolutionBeforeClosing() {
+	// stop server
+	var shutDownServer = studio.getPreferences('shutdownServerAfterSolutionClose');
+    shutDownServer = shutDownServer === undefined || shutDownServer;
+
+	if(shutDownServer && studio.isCommandChecked('startWakandaServer')) {
+		studio.sendCommand('ShutdownWakandaServer');
+	}
+}
+
+function HandleRestoreDefaultPreferences()
+{
+    studio.setPreferences('shutdownServerAfterSolutionClose', true );
+}
 
 exports.handleMessage = function handleMessage(message) {
 	"use strict";
@@ -45,5 +59,9 @@ exports.handleMessage = function handleMessage(message) {
 	    Preferences();
 	else if (message.action == "initPreferences")
 	    InitPreferences();
+	else if (message.action === "handleSolutionBeforeClosing")
+		HandleSolutionBeforeClosing();
+	else if (message.action === "handleRestoreDefaultPreferences")
+	    HandleRestoreDefaultPreferences();
 };
 

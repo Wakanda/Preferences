@@ -12,6 +12,11 @@
             "studio" : true
         },
         {
+            "name" : "reloadWithoutConfirmation",
+            "type" : "boolean",
+            "studio" : true
+        },
+        {
             "name" : "showTips",
             "type" : "boolean",
             "studio" : true
@@ -35,6 +40,12 @@
             "name": "environmentVariablePath",
             "type": "textarea",
             "studio": false
+        },
+        {
+            "name": "shutdownServerAfterSolutionClose",
+            "type": "boolean",
+            "studio": false,
+            "default": true
         }
     ]
 }
